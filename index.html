@@ -1,0 +1,1004 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>for baby ♡</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #08060d;
+            color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -5;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.16), transparent 32%),
+                radial-gradient(circle at 15% 80%, rgba(168, 85, 247, 0.08), transparent 25%),
+                #08060d;
+        }
+
+        .glow {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: rgba(139, 92, 246, 0.07);
+            filter: blur(100px);
+            animation: floatGlow 10s ease-in-out infinite alternate;
+        }
+
+        .glow.one {
+            top: -150px;
+            left: -150px;
+        }
+
+        .glow.two {
+            right: -180px;
+            bottom: -150px;
+            animation-delay: 2s;
+        }
+
+        @keyframes floatGlow {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(80px, -40px);
+            }
+        }
+
+        /* =========================
+           STARS
+        ========================= */
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.15;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.5);
+            }
+        }
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        .music-button {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            z-index: 50;
+
+            width: 48px;
+            height: 48px;
+
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 50%;
+
+            background: rgba(17, 13, 24, 0.75);
+            backdrop-filter: blur(12px);
+
+            color: white;
+            font-size: 18px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .music-button:hover {
+            transform: scale(1.08);
+            border-color: #a855f7;
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            animation: heroAppear 1.5s ease forwards;
+        }
+
+        @keyframes heroAppear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tiny {
+            color: #a855f7;
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(60px, 12vw, 125px);
+            font-weight: 500;
+            line-height: 0.95;
+            margin-bottom: 30px;
+
+            text-shadow:
+                0 0 40px rgba(168, 85, 247, 0.18);
+        }
+
+        .hero h1 span {
+            color: #a855f7;
+        }
+
+        .hero p {
+            color: #c9c4d0;
+            max-width: 550px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .open-button {
+            margin-top: 45px;
+
+            padding: 15px 30px;
+
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-radius: 999px;
+
+            background: rgba(168, 85, 247, 0.08);
+            color: white;
+
+            font-family: inherit;
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .open-button:hover {
+            background: rgba(168, 85, 247, 0.2);
+            box-shadow: 0 0 35px rgba(168, 85, 247, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            color: #77717f;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, 8px);
+            }
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 120px 7%;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #a855f7;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 6vw, 65px);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #aaa4b3;
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 55px;
+        }
+
+        /* =========================
+           APPRECIATION CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            position: relative;
+            padding: 30px;
+
+            min-height: 190px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.015)
+                );
+
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 22px;
+
+            backdrop-filter: blur(15px);
+
+            transition: 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+        }
+
+        .card-number {
+            color: #a855f7;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaa4b3;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .photo-section {
+            text-align: center;
+        }
+
+        .photo-wrapper {
+            width: min(430px, 90vw);
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .photo-wrapper::before {
+            content: "";
+            position: absolute;
+            inset: -12px;
+
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            border-radius: 25px;
+
+            transform: rotate(3deg);
+            z-index: -1;
+        }
+
+        .photo-wrapper::after {
+            content: "";
+            position: absolute;
+            inset: -25px;
+
+            background: rgba(168, 85, 247, 0.08);
+            filter: blur(35px);
+            z-index: -2;
+        }
+
+        .her-photo {
+            width: 100%;
+            display: block;
+
+            border-radius: 18px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            /* replace this with your actual image */
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+
+            background: #110d18;
+        }
+
+        .photo-caption {
+            margin-top: 25px;
+            color: #8f8998;
+            font-size: 13px;
+        }
+
+        /* =========================
+           LETTER
+        ========================= */
+
+        .letter {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .letter-box {
+            padding: clamp(30px, 6vw, 65px);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(168,85,247,0.08),
+                    rgba(255,255,255,0.025)
+                );
+
+            border: 1px solid rgba(168,85,247,0.18);
+            border-radius: 28px;
+
+            box-shadow: 0 30px 100px rgba(0,0,0,0.25);
+        }
+
+        .letter-box p {
+            color: #d0cbd5;
+            line-height: 2;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .signature {
+            margin-top: 40px;
+            color: #a855f7;
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .final-heart {
+            font-size: 55px;
+            color: #a855f7;
+            margin-bottom: 30px;
+
+            animation: heartbeat 2s infinite ease-in-out;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .final h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 7vw, 75px);
+            font-weight: 500;
+            max-width: 800px;
+        }
+
+        .final p {
+            color: #9993a1;
+            max-width: 550px;
+            margin-top: 25px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #4e4855;
+            font-size: 12px;
+        }
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 90px 6%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                min-height: auto;
+            }
+
+            .music-button {
+                top: 15px;
+                right: 15px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         BACKGROUND
+    ========================= -->
+
+    <div class="background">
+        <div class="glow one"></div>
+        <div class="glow two"></div>
+    </div>
+
+    <div class="stars" id="stars"></div>
+
+
+    <!-- =========================
+         MUSIC
+    ========================= -->
+
+    <!--
+        put her favorite song in the same folder as this file
+        and rename it to:
+
+        song.mp3
+    -->
+
+    <audio id="song" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-button" id="musicButton" title="music">
+        ♫
+    </button>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="tiny">
+                something made only for you my love.
+            </div>
+
+            <h1>
+                for <span>baby</span> :3
+            </h1>
+
+            <p>
+                i wanted to make you something that could remind you
+                just how appreciated you are.
+            </p>
+
+            <button class="open-button" id="openButton">
+                CLICK THIS PLSPSLPSL
+            </button>
+
+        </div>
+
+        <div class="scroll">
+            scroll ↓
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         APPRECIATION
+    ========================= -->
+
+    <section>
+
+        <div class="reveal">
+
+            <div class="section-label">
+                01 — why you. GIGGLES
+            </div>
+
+            <h2 class="section-title">
+                things i appreciate about you
+            </h2>
+
+            <p class="section-description">
+                i could probably keep going forever, but here are a few
+                of the things that make you so special to me.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card reveal">
+                <div class="card-number">01</div>
+                <h3>your kindness</h3>
+                <p>
+                    you're genuinely such a kind person, and it's one of
+                    the things i appreciate about you the most.
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">02</div>
+                <h3>talking to you</h3>
+                <p>
+                    you're honestly amazing to text. the first day of texting you
+                    was enough for me to fall in love with you.
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">03</div>
+                <h3>just you</h3>
+                <p>
+                    you're genuinely one of the most amazing people i've
+                    ever had the chance to know. like cmon no ones defended me
+                    with their life on the FIRST day of meeting me. i love you.
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">04</div>
+                <h3>no judgment</h3>
+                <p>
+                    i love that i can talk to you about basically anything
+                    without feeling like youre a judge. i love you. 
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">05</div>
+                <h3>your smile</h3>
+                <p>
+                    you have this way of making me smile without even
+                    trying my love. its genuinely MINDBLOWING!!!! :D
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">06</div>
+                <h3>your voice</h3>
+                <p>
+                    your voice is genuinely so soft and cute. i could
+                    listen to you talk for the entire day. i love you.
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">07</div>
+                <h3>you always listen</h3>
+                <p>
+                    i appreciate how you always push me to actually vent
+                    when something is bothering me, and i always
+                    feel better after talking to you. i love you.
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">08</div>
+                <h3>your support</h3>
+                <p>
+                    you're so supportive and amazing, and knowing you're
+                    there makes things feel a little easier for me :)
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">09</div>
+                <h3>your heart</h3>
+                <p>
+                    the way you treat other people says so much about
+                    the kind of person you are, and i really admire that. i love you.
+                </p>
+            </div>
+
+
+            <div class="card reveal">
+                <div class="card-number">10</div>
+                <h3>you being you</h3>
+                <p>
+                    honestly theres something about you that i cant
+                    fully put into words. i just really appreciate you
+                    for being exactly who you are. i love you.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PHOTO
+    ========================= -->
+
+    <section class="photo-section">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                02 — you
+            </div>
+
+            <h2 class="section-title">
+                just one picture.
+            </h2>
+
+            <p class="section-description" style="margin-left:auto;margin-right:auto;">
+                because.. just one pic of you is enough to make my day.
+            </p>
+
+        </div>
+
+
+        <div class="photo-wrapper reveal">
+
+            <!--
+                replace "her-photo.jpg"
+                with the filename of her photo
+            -->
+
+            <img
+                src="her-photo.jpg"
+                alt="a picture of baby"
+                class="her-photo"
+            >
+
+        </div>
+
+        <div class="photo-caption reveal">
+            pretty much my favorite person.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LETTER
+    ========================= -->
+
+    <section class="letter">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                03 — a little letter heh
+            </div>
+
+            <h2 class="section-title">
+                something i rlly wanted you to know..
+            </h2>
+
+        </div>
+
+
+        <div class="letter-box reveal">
+
+            <p>
+                BABBYUUUHHH
+            </p>
+
+            <p>
+                i know we've only known each other for two weeks,
+                but somehow you've already become the best person here.
+            </p>
+
+            <p>
+                you're kind, supportive, amazing to talk to, and you
+                somehow always know how to make me feel better. i love
+                that i can talk to you about anything and not be scared.
+            </p>
+
+            <p>
+                i appreciate the way you listen to me, the way you
+                push me to actually talk when something is wrong,
+                and even the little things, like your soft, cute voice
+                and the way you make me smile without even trying.
+            </p>
+
+            <p>
+                i don't think i need some huge reason to appreciate you.
+                you're just you.
+                thats all i need.
+            </p>
+
+            <p>
+                so i made this website because i wanted you to
+                have something you could come back to whenever you
+                need a reminder of how appreciated you are.
+            </p>
+
+            <div class="signature">
+                — yours.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final">
+
+        <div class="reveal">
+
+            <div class="final-heart">
+                ♡
+            </div>
+
+            <h2>
+                thank you for being mine baby.
+            </h2>
+
+            <p>
+                this website could never fit everything i appreciate
+                about you, but i hope it at least reminds you that
+                youre really, really special to me.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        made with love for my one and only.
+    </footer>
+
+
+    <script>
+
+        /* =========================
+           CREATE STARS
+        ========================= */
+
+        const stars = document.getElementById("stars");
+
+        for (let i = 0; i < 100; i++) {
+
+            const star = document.createElement("div");
+
+            star.classList.add("star");
+
+            star.style.left = Math.random() * 100 + "%";
+            star.style.top = Math.random() * 100 + "%";
+
+            star.style.animationDelay =
+                Math.random() * 3 + "s";
+
+            star.style.animationDuration =
+                2 + Math.random() * 4 + "s";
+
+            stars.appendChild(star);
+        }
+
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        const song = document.getElementById("song");
+        const musicButton = document.getElementById("musicButton");
+        const openButton = document.getElementById("openButton");
+
+        let playing = false;
+
+        function startMusic() {
+
+            song.play()
+                .then(() => {
+
+                    playing = true;
+
+                    musicButton.textContent = "♫";
+
+                })
+                .catch(() => {
+
+                    console.log("music could not start");
+
+                });
+
+        }
+
+
+        openButton.addEventListener("click", () => {
+
+            startMusic();
+
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        musicButton.addEventListener("click", () => {
+
+            if (playing) {
+
+                song.pause();
+
+                playing = false;
+
+                musicButton.textContent = "🔇";
+
+            } else {
+
+                startMusic();
+
+            }
+
+        });
+
+
+        /* =========================
+           SCROLL REVEALS
+        ========================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
+
